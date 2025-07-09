@@ -1,4 +1,5 @@
 import { TachePersonnelle } from "./tachePersonnelle.js";
+import { TacheProfessionnelle } from "./tacheProfessionnelle.js";
 
 class GestionnaireDeTaches {
 
@@ -32,8 +33,13 @@ class GestionnaireDeTaches {
         const tacheDate = document.querySelector(".tache_date").value;
         const tacheLieu = document.querySelector(".tache_lieu").value;
 
-        let nouvelleTache = new TachePersonnelle(tacheTitre, tacheTexte, tacheDate, tacheLieu, typeTache);
-        nouvelleTache.afficher();
+        let nouvelleTache;
+
+        if (typeTache == 1) {
+            nouvelleTache = new TachePersonnelle(tacheTitre, tacheTexte, tacheDate, tacheLieu, typeTache);
+        } else {
+            nouvelleTache = new TacheProfessionnelle(tacheTitre, tacheTexte, tacheDate, tacheLieu, typeTache);
+        }
 
         //Ajout à la collection de task
         this.collectionTaches.push(nouvelleTache);
@@ -42,6 +48,20 @@ class GestionnaireDeTaches {
 
     }
 
-}
+    /**Méthode afficher tâche */
+    // afficherLesTaches() {
 
+    //     if (this.#collectionTaches.length === 0) {
+    //         return "Vous n'avez aucune tâche pour le moment.";
+    //     }
+
+    //     const listeFormatee = this.#collectionTaches.map((tache, index) => {
+
+    //         return `${index + 1} ${tache.afficher()}`;
+
+    //     });
+
+    //     return `Vos tâches :\n${listeFormatee.join('\n')}`;
+    // }
+}
 export { GestionnaireDeTaches };

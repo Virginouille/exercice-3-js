@@ -18,7 +18,14 @@ formAjoutTache.addEventListener("submit", (event) => {
 
     const nouvelleTache = gestionnaireDeTaches.ajouterTache();
     console.log("Tâche ajoutée :", nouvelleTache);
+
+    /**Afficher les taches */
+    // const afficherTaches = gestionnaireDeTaches.afficherLesTaches();
+    // console.log(afficherTaches);
 });
+
+
+
 
 
 

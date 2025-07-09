@@ -1,14 +1,16 @@
 import { Tache } from "./tache.js";
 
-class TachePersonnelle extends Tache {
+class TacheProfessionnelle extends Tache {
 
     //Attribut
     #lieu;
+    #projet;
 
     //Constructeur
-    constructor(titre, texte, date, lieu) {
+    constructor(titre, texte, projet, date, lieu) {
         super(titre, texte, date);
         this.#lieu = lieu;
+        this.#projet = projet;
     }
 
     //Getter et Setter
@@ -22,9 +24,9 @@ class TachePersonnelle extends Tache {
 
     /**Méthode afficher lieu */
     afficher() {
-        return super.afficher() + `\nLieu : ${this.lieu}`;
+        return super.afficher() + `\nProjet : ${this.#projet} Lieu : ${this.#lieu}`;
     };
 }
 
 //Export
-export { TachePersonnelle };
+export { TacheProfessionnelle };
