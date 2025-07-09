@@ -71,6 +71,24 @@ class GestionnaireDeTaches {
         divTaches.appendChild(ul);
     }
 
+    /**Methode apparition btn supprimer*/
+    apparitionBtn() {
+        const apparition_btn = document.createElement("button");
+        apparition_btn.innerHTML = "Supprimer";
+        apparition_btn.className = "btn_supprimer";
+
+        const divParent = document.getElementById("zone_taches");
+        divParent.appendChild(apparition_btn);
+    }
+
+    /**Méthode suppression tâche */
+    supprimerTache() {
+        const btnSupprimer = document.querySelector(".btn_supprimer");
+        btnSupprimer.addEventListener("click", () => {
+            alert("btn cliqué test");
+        })
+    }
+
 
 
 

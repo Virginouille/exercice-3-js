@@ -16,16 +16,18 @@
         <a href="#" class="btn_afficherTaches">Afficher les tâches</a>
 
         <form class="form_ajout_tache">
-            <select class="type_tache">
-                <option value="1">Perso</option>
-                <option value="2">Pro</option>
-            </select>
 
-            <input type="text" class="tache_titre" name="titre">
-            <input type="text" class="tache_texte" name="descrption">
-            <input type="date" class="tache_date" name="date">
-            <input type="texte" class="tache_lieu" name="lieu">
+            <div id="zone_taches">
+                <select class="type_tache">
+                    <option value="1">Perso</option>
+                    <option value="2">Pro</option>
+                </select>
 
+                <input type="text" class="tache_titre" name="titre">
+                <input type="text" class="tache_texte" name="descrption">
+                <input type="date" class="tache_date" name="date">
+                <input type="texte" class="tache_lieu" name="lieu">
+            </div>
             <input type="submit" value="ajouter" id="valider">
 
         </form>
