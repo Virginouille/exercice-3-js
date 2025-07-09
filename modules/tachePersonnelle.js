@@ -29,7 +29,7 @@ class TachePersonnelle extends Tache {
 
     /**Méthode afficher lieu */
     afficher() {
-        return `Intitule : ${this.titre}\nDescription : ${this.texte}\nDate : ${this.date.toLocaleDateString("fr")}\nLieu : ${this.lieu}`
+        return super.afficher() + `\nLieu : ${this.lieu}`;
     };
 }
 

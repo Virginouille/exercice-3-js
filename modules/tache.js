@@ -45,7 +45,7 @@ class Tache {
      */
 
     afficher() {
-        return `Tâche : ${this.titre}\nIntitulé : ${this.texte}\nDate : ${this.date.toLocaleDateString("fr")}`
+        return `Tâche : ${this.titre}\nIntitulé : ${this.texte}\nDate : ${this.date}`
     };
 }
 
