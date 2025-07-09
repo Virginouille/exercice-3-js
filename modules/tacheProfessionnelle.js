@@ -3,28 +3,26 @@ import { Tache } from "./tache.js";
 class TacheProfessionnelle extends Tache {
 
     //Attribut
-    #lieu;
     #projet;
 
     //Constructeur
-    constructor(titre, texte, projet, date, lieu) {
+    constructor(titre, texte, date, projet) {
         super(titre, texte, date);
-        this.#lieu = lieu;
         this.#projet = projet;
     }
 
     //Getter et Setter
-    get lieu() {
-        return this.#lieu;
+    get projet() {
+        return this.#projet;
     }
 
-    set lieu(choixLieu) {
-        this.#lieu = choixLieu;
+    set projet(nomProjet) {
+        this.#projet = nomProjet;
     }
 
     /**Méthode afficher lieu */
     afficher() {
-        return super.afficher() + `\nProjet : ${this.#projet} Lieu : ${this.#lieu}`;
+        return super.afficher() + `\nProjet : ${this.#projet}`;
     };
 }
 
