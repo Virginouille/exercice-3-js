@@ -37,20 +37,19 @@ class Tache {
     set date(nouvelleDate) {
         this.#date = nouvelleDate;
     }
-}
 
 
-/**Méthode afficher() 
-  * @return une chaine descriptive
- */
 
-function afficher() {
-    return {
-        "Titre": tache.titre,
-        "Texte": tache.texte,
-        "Date": tache.date
+    /**Méthode afficher() 
+    * @return une chaine descriptive
+     */
+
+    afficher() {
+        return `Tâche : ${this.titre}\nIntitulé : ${this.texte}\nDate : ${this.date.toLocaleDateString("fr")}`
     };
 }
+
+
 
 /**Méthode contientMot(mot) 
  * @return retourne true si le mot est dans le titre ou le texte insensible à la casse/accents
@@ -61,4 +60,4 @@ function afficher() {
 */
 
 //Exports module
-export { afficher };
+export { Tache };
