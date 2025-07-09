@@ -50,7 +50,6 @@ class Tache {
 }
 
 
-
 /**Méthode contientMot(mot) 
  * @return retourne true si le mot est dans le titre ou le texte insensible à la casse/accents
 */
