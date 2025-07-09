@@ -49,19 +49,30 @@ class GestionnaireDeTaches {
     }
 
     /**Méthode afficher tâche */
-    // afficherLesTaches() {
+    afficherLesTaches() {
 
-    //     if (this.#collectionTaches.length === 0) {
-    //         return "Vous n'avez aucune tâche pour le moment.";
-    //     }
+        //Selection div où afficher
+        const divTaches = document.getElementById("taches");
 
-    //     const listeFormatee = this.#collectionTaches.map((tache, index) => {
+        //Check si liste vide et renvoi message dans div
+        if (this.#collectionTaches.length === 0) {
+            divTaches.textContent = "Pas de tâches"
+            return;
+        }
 
-    //         return `${index + 1} ${tache.afficher()}`;
+        const ul = document.createElement("ul");
 
-    //     });
+        this.#collectionTaches.forEach((tache, index) => {
+            const li = document.createElement("li");
+            li.textContent = `${index + 1} ${tache.afficher()}`;
+            ul.appendChild(li);
+        });
 
-    //     return `Vos tâches :\n${listeFormatee.join('\n')}`;
-    // }
+        divTaches.appendChild(ul);
+    }
+
+
+
+
 }
 export { GestionnaireDeTaches };
